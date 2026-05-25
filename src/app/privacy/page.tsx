@@ -38,8 +38,8 @@ export default function PrivacyPage() {
               <h2 className="text-2xl font-semibold tracking-[-0.03em] text-foreground">Questions</h2>
               <p className="text-sm leading-7 text-muted-foreground">
                 If you have questions about privacy or data handling, email{" "}
-                <a href="mailto:daniel@danielkliewer.com" className="font-medium text-primary">
-                  daniel@danielkliewer.com
+                <a href="mailto:danielkliewer@gmail.com" className="font-medium text-primary">
+                  danielkliewer@gmail.com
                 </a>
                 .
               </p>

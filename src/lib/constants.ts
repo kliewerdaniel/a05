@@ -8,7 +8,7 @@ export const SITE = {
   url: "https://danielkliewer.com",
   image: "/opengraph-image",
   location: "Austin, TX",
-  email: "daniel@danielkliewer.com",
+  email: "danielkliewer@gmail.com",
   links: {
     github: "https://github.com/kliewerdaniel",
     twitter: "https://twitter.com/kliewerdaniel",
