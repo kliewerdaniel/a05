@@ -14,7 +14,7 @@ const SOCIAL_LINKS = [
 const FOOTER_LINKS = {
   Work: [
     { href: "/services", label: "Services" },
-    { href: "/case-studies", label: "Case Studies" },
+    { href: "/case-studies", label: "Projects" },
     { href: "/contact", label: "Contact" },
   ],
   Writing: [
@@ -44,13 +44,13 @@ export function Footer() {
                   <div className="text-lg font-semibold tracking-[-0.03em] text-foreground">
                     {SITE.name}
                   </div>
-                  <p className="text-sm text-muted-foreground">AI Infrastructure & Systems Engineering</p>
+                  <p className="text-sm text-muted-foreground">Generative AI Generalist • AI Ops • RLHF</p>
                 </div>
               </div>
 
               <p className="max-w-xl text-sm leading-7 text-muted-foreground sm:text-base">
-                Local-first AI systems, architectural clarity, and editorial-quality technical
-                writing for teams that care about control, performance, and quality.
+                AI operations, local systems, and full-stack delivery with a bias toward quality,
+                clarity, and measurable outcomes.
               </p>
 
               <div className="flex flex-wrap items-center gap-3">

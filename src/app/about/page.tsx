@@ -13,7 +13,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Background, philosophy, and timeline for Daniel Kliewer's AI infrastructure and systems work.",
+    "Daniel Kliewer's background in AI operations, RLHF, local AI systems, and full-stack delivery.",
 };
 
 const socialLinks = [
@@ -28,10 +28,10 @@ export default function AboutPage() {
     <>
       <PageHeader
         eyebrow="About"
-        title="Systems engineer, technical writer, and local-first advocate."
-        description="I build production AI systems that run on your infrastructure. The work spans knowledge systems, workflow automation, local deployment, and the editorial layer that makes the site worth reading."
+        title="AI generalist with a bias toward operations, quality, and delivery."
+        description="I work across data annotation, RLHF, evaluation, local AI systems, and full-stack implementation. The through-line is simple: make the system reliable, legible, and shippable."
         primaryAction={{ label: "Work together", href: "/contact" }}
-        secondaryAction={{ label: "Read the blog", href: "/blog" }}
+        secondaryAction={{ label: "View projects", href: "/case-studies" }}
       />
 
       <MetricsBar />
@@ -44,11 +44,11 @@ export default function AboutPage() {
                 <span className="eyebrow-dot" />
                 <span>Perspective</span>
               </div>
-              <h2 className="section-heading mt-6">What I think software should be.</h2>
+              <h2 className="section-heading mt-6">What I care about in the work.</h2>
             </div>
             <p className="lead-copy max-w-2xl text-muted-foreground lg:justify-self-end">
-              The work is designed around ownership, clarity, and durability. If a system is not
-              understandable, operable, and maintainable, it is not finished.
+              I value systems that are measurable, understandable, and useful to the people who have
+              to live with them after launch.
             </p>
           </div>
 
@@ -82,8 +82,8 @@ export default function AboutPage() {
               <h2 className="section-heading mt-6">The path to the current practice.</h2>
             </div>
             <p className="lead-copy max-w-2xl text-muted-foreground lg:justify-self-end">
-              The site needs enough narrative to feel human, but not so much that the page becomes
-              self-indulgent.
+              The page should explain the transition from annotation and evaluation into local AI
+              systems and full-stack delivery without losing the thread.
             </p>
           </div>
 
@@ -124,8 +124,8 @@ export default function AboutPage() {
               </div>
               <h2 className="section-heading mt-6">Find me where the work is documented.</h2>
               <p className="lead-copy mt-5">
-                Social links exist for context, but the highest-value conversations usually start
-                from email or a project brief.
+                Social links exist for context, but the best conversations usually start from email
+                or a concrete project brief.
               </p>
             </div>
 
@@ -146,8 +146,8 @@ export default function AboutPage() {
       </section>
 
       <CTASection
-        headline="Let's build something precise."
-        body="If the problem is clear enough to discuss, it is clear enough to start shaping the system."
+        headline="Need a partner for AI operations or a build?"
+        body="If the project touches evaluation, local inference, or full-stack delivery, I can help shape it."
         buttonText="Work with me"
         buttonUrl="/contact"
         variant="prominent"

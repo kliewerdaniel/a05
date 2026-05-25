@@ -21,7 +21,7 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Fixed-price AI infrastructure, local LLM deployment, workflow automation, and knowledge system architecture.",
+    "AI operations, RLHF, local AI systems, full-stack product delivery, documentation, and research workflows.",
 };
 
 const process = [
@@ -50,10 +50,10 @@ export default function ServicesPage() {
     <>
       <PageHeader
         eyebrow="Services"
-        title="AI infrastructure, built to order."
-        description="Custom AI systems designed for control, privacy, and operational clarity. Fixed-price engagements. Production-ready delivery."
-        primaryAction={{ label: "Book a consultation", href: "/contact" }}
-        secondaryAction={{ label: "Explore writing", href: "/blog" }}
+        title="What I offer."
+        description="A set of practical ways to work together: AI operations, local systems, full-stack delivery, documentation, and research-heavy execution."
+        primaryAction={{ label: "Start a conversation", href: "/contact" }}
+        secondaryAction={{ label: "Read about me", href: "/about" }}
       />
 
       <section className="section-shell pt-0">
@@ -82,11 +82,11 @@ export default function ServicesPage() {
                 <span className="eyebrow-dot" />
                 <span>Offerings</span>
               </div>
-              <h2 className="section-heading mt-6">Systems that ship with a clear boundary and a clear operating model.</h2>
+              <h2 className="section-heading mt-6">Ways I can contribute to your work.</h2>
             </div>
             <p className="lead-copy max-w-2xl text-muted-foreground lg:justify-self-end">
-              Each engagement is shaped around the smallest useful deliverable. No gratuitous scope,
-              no overbuilt process, and no generic consulting theater.
+              Each engagement is shaped around the smallest useful deliverable. The goal is to move
+              the work forward, not to fill the page with generic consulting language.
             </p>
           </div>
 
@@ -131,11 +131,11 @@ export default function ServicesPage() {
 
                         <CardFooter className="mt-8 flex flex-col items-start gap-4 border-t border-border/70 px-0 pt-6 sm:flex-row sm:items-center sm:justify-between">
                           <div className="text-sm text-muted-foreground">
-                            Fixed-price engagement. Scope and timeline are defined up front.
+                            Scope and timeline are defined up front.
                           </div>
                           <Button variant="outline" asChild className="h-12 px-5">
                             <Link href="/contact">
-                              Discuss this service
+                              Discuss this offer
                               <ArrowRight className="h-4 w-4" />
                             </Link>
                           </Button>
@@ -161,8 +161,8 @@ export default function ServicesPage() {
               <h2 className="section-heading mt-6">Choose the shape of the work.</h2>
             </div>
             <p className="lead-copy max-w-2xl text-muted-foreground lg:justify-self-end">
-              These are the practical ways the work is packaged, from quick audits to ongoing
-              engineering support.
+              These are the practical ways the work is packaged, from a short discovery review to
+              ongoing support.
             </p>
           </div>
 
@@ -236,9 +236,9 @@ export default function ServicesPage() {
       </section>
 
       <CTASection
-        headline="Not sure what you need?"
-        body="Book a free 30-minute consultation. No pitch, no pressure — just a conversation about the actual work."
-        buttonText="Book a Free Consultation"
+        headline="Not sure which offer fits?"
+        body="Book a short call and we’ll decide whether the problem calls for an audit, a sprint, or ongoing support."
+        buttonText="Book a call"
         buttonUrl="/contact"
         variant="prominent"
       />

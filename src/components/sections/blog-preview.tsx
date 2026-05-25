@@ -27,15 +27,15 @@ export function BlogPreview({ posts }: BlogPreviewProps) {
             </div>
             <h2 className="section-heading mt-6">Technical essays, systems notes, and field reports.</h2>
             <p className="lead-copy mt-5">
-              The archive is treated as a product surface: readable, structured, and easy to scan on
-              mobile without sacrificing depth.
+              The archive reflects the work itself: practical, detailed, and useful if you want to
+              understand how the systems are actually put together.
             </p>
           </FadeIn>
 
           <Surface variant="outline" className="p-6">
-            <p className="text-sm leading-7 text-muted-foreground">
-              Recent writing covers local model deployment, knowledge systems, evaluation
-              workflows, and the engineering tradeoffs that matter in production.
+              <p className="text-sm leading-7 text-muted-foreground">
+              Recent writing covers local model deployment, evaluation workflows, knowledge systems,
+              and the engineering tradeoffs that matter in production.
             </p>
           </Surface>
         </div>

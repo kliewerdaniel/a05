@@ -26,11 +26,10 @@ export default function TwitterImage() {
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 20, maxWidth: 930 }}>
           <div style={{ fontSize: 76, lineHeight: 1.02, letterSpacing: "-0.06em", fontWeight: 700 }}>
-            AI infrastructure with taste, restraint, and depth.
+            Generative AI generalist with operational depth.
           </div>
           <div style={{ fontSize: 30, lineHeight: 1.35, color: "rgba(245,247,255,0.8)" }}>
-            Local-first systems engineering for teams that care about privacy, performance, and
-            clear delivery.
+            AI operations, RLHF, local systems, and full-stack delivery for serious product work.
           </div>
         </div>
       </div>
@@ -38,4 +37,3 @@ export default function TwitterImage() {
     size,
   );
 }
-

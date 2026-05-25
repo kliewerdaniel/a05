@@ -48,21 +48,21 @@ export default function OpenGraphImage() {
 
         <div style={{ maxWidth: 860, display: "flex", flexDirection: "column", gap: 24 }}>
           <div style={{ fontSize: 76, lineHeight: 1, letterSpacing: "-0.06em", fontWeight: 700 }}>
-            Local-first AI infrastructure.
+            Generative AI Generalist.
           </div>
           <div style={{ fontSize: 34, lineHeight: 1.35, color: "rgba(245,247,255,0.8)" }}>
-            Production systems, technical writing, and design discipline for teams that need
-            control, privacy, and leverage.
+            AI operations, RLHF, local systems, and full-stack delivery shaped by a decade of
+            annotation, evaluation, and product work.
           </div>
         </div>
 
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>
           <div style={{ display: "flex", gap: 18, fontSize: 22, color: "rgba(245,247,255,0.72)" }}>
-            <span>AI infrastructure</span>
+            <span>AI operations</span>
             <span>•</span>
-            <span>Systems engineering</span>
+            <span>RLHF</span>
             <span>•</span>
-            <span>Technical authority</span>
+            <span>Local systems</span>
           </div>
           <div style={{ fontSize: 22, color: "rgba(245,247,255,0.72)" }}>{SITE.url.replace("https://", "")}</div>
         </div>

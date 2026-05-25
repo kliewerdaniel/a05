@@ -24,14 +24,14 @@ export function ServicesGrid() {
         <FadeIn className="mx-auto max-w-3xl text-center">
           <div className="eyebrow mx-auto">
             <span className="eyebrow-dot" />
-            <span>What I build</span>
+            <span>What I offer</span>
           </div>
           <h2 className="section-heading mx-auto mt-6">
-            Production AI systems for organizations that need control, privacy, and real integration.
+            Practical AI work grounded in operations, evaluation, and delivery.
           </h2>
           <p className="lead-copy mx-auto mt-5 max-w-2xl">
-            The work is structured to look premium and operate cleanly: one system, one design
-            language, no duplicate patterns, and no noisy marketing surfaces.
+            The site should show the breadth of the work: RLHF and evaluation, local systems,
+            full-stack builds, documentation, and research-heavy execution.
           </p>
         </FadeIn>
 

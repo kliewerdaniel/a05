@@ -5,7 +5,7 @@ import { ResourcesGrid } from "@/components/sections/resources-grid";
 
 export const metadata: Metadata = {
   title: "Resources",
-  description: "Practical guides, templates, and tools for building local-first AI systems.",
+  description: "Practical guides, templates, and tools drawn from Daniel Kliewer's AI work.",
 };
 
 export default function ResourcesPage() {
@@ -14,8 +14,8 @@ export default function ResourcesPage() {
       <PageHeader
         eyebrow="Resources"
         title="Useful guides without the noise."
-        description="Practical resources for building local-first AI systems. Designed to be useful, not promotional."
-        primaryAction={{ label: "Book a consultation", href: "/contact" }}
+        description="Practical resources pulled from the way I actually work: systems, workflows, and process."
+        primaryAction={{ label: "Book a call", href: "/contact" }}
         secondaryAction={{ label: "Read the blog", href: "/blog" }}
       />
 
@@ -43,8 +43,8 @@ export default function ResourcesPage() {
 
       <CTASection
         headline="Need guidance instead of a download?"
-        body="Book a consultation and get a clear recommendation for your specific constraints."
-        buttonText="Book a consultation"
+        body="Book a call and get a clear recommendation for your specific constraints."
+        buttonText="Book a call"
         buttonUrl="/contact"
       />
     </>

@@ -10,9 +10,9 @@ import { Surface } from "@/components/ui/surface";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "AI Infrastructure & Systems Engineering",
+  title: "Daniel Kliewer — Generative AI Generalist",
   description:
-    "Local-first AI infrastructure, production systems, and technical writing for teams that need control, privacy, and leverage.",
+    "AI operations, RLHF, local AI systems, and full-stack work shaped by 10+ years of annotation, evaluation, and delivery.",
 };
 
 export default function HomePage() {
@@ -21,10 +21,10 @@ export default function HomePage() {
   return (
     <>
       <HeroSection
-        headline="Local-first AI infrastructure for teams that need control."
-        subheadline="I design and build private AI systems, production interfaces, and technical content with the same constraint every serious product needs: clarity."
-        primaryCTA={{ label: "Book a Free Consultation", href: "/contact" }}
-        secondaryCTA={{ label: "View Services", href: "/services" }}
+        headline="Generative AI generalist, AI ops specialist, and builder of local systems."
+        subheadline="I bring 10+ years of data annotation, RLHF, evaluation, local LLM work, and full-stack delivery into one practical offering."
+        primaryCTA={{ label: "See what I offer", href: "/services" }}
+        secondaryCTA={{ label: "Read about me", href: "/about" }}
       />
 
       <ServicesGrid />
@@ -38,11 +38,11 @@ export default function HomePage() {
               <div className="space-y-3">
                 <div className="eyebrow">
                   <span className="eyebrow-dot" />
-                  <span>Operating principle</span>
+                  <span>What I bring</span>
                 </div>
                 <blockquote className="max-w-3xl text-2xl font-medium tracking-[-0.03em] text-foreground sm:text-3xl">
-                  AI infrastructure should be owned, not rented. Local-first, private, and built
-                  to last.
+                  I turn ambiguous AI work into reliable operations, local systems, and shipped
+                  products.
                 </blockquote>
               </div>
               <div className="grid gap-3 sm:grid-cols-3 lg:min-w-[34rem]">
@@ -64,12 +64,12 @@ export default function HomePage() {
       <BlogPreview posts={posts} />
 
       <CTASection
-        headline="Ready to build something precise?"
-        body="If you have a project, I can help shape the architecture, define the delivery path, and turn the problem into a system."
-        buttonText="Book a Free Consultation"
+        headline="Need help turning AI work into something usable?"
+        body="If you have a project, I can help define the system, the workflow, and the path to delivery."
+        buttonText="Start a conversation"
         buttonUrl="/contact"
         variant="prominent"
-        secondaryText="No pressure, no pitch. Just a clear conversation about what the work requires."
+        secondaryText="No pitch. Just a direct discussion about the work and whether I’m the right fit."
       />
     </>
   );

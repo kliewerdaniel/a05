@@ -12,21 +12,24 @@ export interface BlogPost {
   image?: string;
 }
 
-export interface CaseStudy {
+export interface Project {
   slug: string;
   title: string;
-  client: string;
-  timeline: string;
-  role: string;
-  technologies: string[];
-  metrics: { value: string; label: string }[];
-  results: string[];
+  repo: string;
+  repoUrl: string;
+  category: string;
+  summary: string;
+  description: string;
+  tags: string[];
+  stack: string[];
+  highlights: string[];
   featured?: boolean;
   published: boolean;
   date: string;
-  content: string;
   image?: string;
 }
+
+export type CaseStudy = Project;
 
 export interface Service {
   slug: string;

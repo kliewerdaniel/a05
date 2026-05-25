@@ -33,12 +33,12 @@ export const metadata: Metadata = {
     canonical: SITE.url,
   },
   keywords: [
-    "AI infrastructure",
-    "local AI",
-    "RAG systems",
-    "workflow automation",
+    "AI operations",
+    "RLHF",
+    "local AI systems",
+    "evaluation workflows",
     "Next.js",
-    "systems engineering",
+    "full-stack development",
   ],
   icons: {
     icon: "/icon",

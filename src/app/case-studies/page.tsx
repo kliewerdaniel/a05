@@ -1,87 +1,51 @@
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
 import { PageHeader } from "@/components/layout/page-header";
-import { CASE_STUDIES } from "@/lib/constants";
 import { CTASection } from "@/components/sections/cta-section";
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { ProjectsGrid } from "@/components/sections/projects-grid";
 import { Surface } from "@/components/ui/surface";
+import { PROJECTS } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Case Studies",
+  title: "Projects",
   description:
-    "Selected system builds, architecture summaries, and measurable results from production AI work.",
+    "Selected GitHub projects showing local AI systems, orchestration, research tools, and full-stack delivery work.",
 };
+
+const projectStats = [
+  { value: PROJECTS.length.toString(), label: "public repositories showcased" },
+  { value: "6", label: "project themes across the page" },
+  { value: "Local", label: "first systems bias" },
+];
 
 export default function CaseStudiesPage() {
   return (
     <>
       <PageHeader
-        eyebrow="Case studies"
-        title="Real systems, real results."
-        description="Selected breakdowns of the architecture, constraints, and outcomes behind the systems I’ve built."
-        primaryAction={{ label: "Book a consultation", href: "/contact" }}
-        secondaryAction={{ label: "View services", href: "/services" }}
-      />
-
-      <section className="section-shell pt-0">
-        <div className="container-page">
-          <div className="grid gap-4 lg:grid-cols-[1fr_auto] lg:items-end">
-            <div className="max-w-3xl">
-              <div className="eyebrow">
-                <span className="eyebrow-dot" />
-                <span>Selected work</span>
+        eyebrow="Projects"
+        title="Selected GitHub work, organized as a portfolio."
+        description="The page reflects the repositories I’ve built: local-first AI systems, orchestration workflows, research tooling, and full-stack experiments that ship."
+        primaryAction={{ label: "Start a conversation", href: "/contact" }}
+        secondaryAction={{ label: "Read about me", href: "/about" }}
+        meta={
+          <div className="grid gap-3 sm:grid-cols-3">
+            {projectStats.map((stat) => (
+              <div
+                key={stat.label}
+                className="rounded-2xl border border-border/70 bg-background/70 p-4 shadow-soft"
+              >
+                <div className="text-2xl font-semibold tracking-[-0.04em] text-foreground">
+                  {stat.value}
+                </div>
+                <div className="mt-1 text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                  {stat.label}
+                </div>
               </div>
-              <h2 className="section-heading mt-6">Focused narratives instead of slideware.</h2>
-            </div>
-            <p className="lead-copy max-w-2xl text-muted-foreground lg:justify-self-end">
-              The page treats each build as a system story: the problem, the structure, the outcome.
-            </p>
-          </div>
-
-          <div className="mt-12 grid gap-5 lg:grid-cols-2">
-            {CASE_STUDIES.map((study) => (
-              <Link key={study.slug} href={`/case-studies/${study.slug}`} className="group block">
-                <Card className="h-full border-border/70 bg-card/80 transition-all duration-300 hover:-translate-y-1 hover:border-primary/25 hover:shadow-lift">
-                  <CardHeader className="space-y-4">
-                    <div className="flex flex-wrap gap-2">
-                      {study.technologies.map((technology) => (
-                        <Badge key={technology} variant="outline" className="text-[10px] uppercase tracking-[0.18em]">
-                          {technology}
-                        </Badge>
-                      ))}
-                    </div>
-                    <CardTitle className="text-2xl tracking-[-0.03em] group-hover:text-primary">
-                      {study.title}
-                    </CardTitle>
-                    <CardDescription className="text-sm text-muted-foreground">{study.client}</CardDescription>
-                  </CardHeader>
-                  <CardContent className="space-y-5">
-                    <p className="text-sm leading-7 text-muted-foreground">{study.content}</p>
-                    <div className="grid gap-4 sm:grid-cols-3">
-                      {study.metrics.map((metric) => (
-                        <div key={metric.label}>
-                          <div className="text-2xl font-semibold tracking-[-0.04em] text-primary">
-                            {metric.value}
-                          </div>
-                          <div className="text-xs uppercase tracking-[0.16em] text-muted-foreground">
-                            {metric.label}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </CardContent>
-                  <div className="flex items-center gap-2 border-t border-border/70 bg-muted/30 px-6 py-5 text-sm font-medium text-foreground">
-                    <span>View case study</span>
-                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </div>
-                </Card>
-              </Link>
             ))}
           </div>
-        </div>
-      </section>
+        }
+      />
+
+      <ProjectsGrid projects={PROJECTS} />
 
       <section className="section-shell pt-0">
         <div className="container-page">
@@ -91,24 +55,27 @@ export default function CaseStudiesPage() {
                 <span className="eyebrow-dot" />
                 <span>Context</span>
               </div>
-              <h2 className="section-heading mt-6">If you need results like these, we should talk.</h2>
-              <p className="lead-copy mt-5">
-                The point of the case studies is not self-promotion. It is to show how the work is
-                structured and what kind of outcome the system is designed to produce.
+              <h2 className="section-heading mt-6">The emphasis is on system design, not inflated narrative.</h2>
+              <p className="lead-copy mt-5 text-muted-foreground">
+                These projects are there to show how I work: privacy boundaries, retrieval,
+                orchestration, content systems, and the kind of implementation detail that makes a
+                project usable after the first demo.
               </p>
             </div>
-            <Link href="/contact" className="inline-flex items-center gap-2 text-sm font-medium text-primary">
-              Book a consultation
-              <ArrowRight className="h-4 w-4" />
-            </Link>
+
+            <div className="space-y-3 text-sm leading-7 text-muted-foreground">
+              <p>• Every project maps back to a real GitHub repository.</p>
+              <p>• The filters group work by actual themes, not generic labels.</p>
+              <p>• The layout is intentionally closer to a clean project index than a sales page.</p>
+            </div>
           </Surface>
         </div>
       </section>
 
       <CTASection
-        headline="Want similar results?"
-        body="Describe the problem, the constraints, and the desired outcome. I’ll help shape the system."
-        buttonText="Book a free consultation"
+        headline="Want a project like this built for your team?"
+        body="If the work touches local AI, agent workflows, or a full-stack system, I can help shape the architecture and delivery path."
+        buttonText="Book a call"
         buttonUrl="/contact"
       />
     </>

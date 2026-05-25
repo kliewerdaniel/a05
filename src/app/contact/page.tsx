@@ -68,10 +68,10 @@ export default function ContactPage() {
     <>
       <PageHeader
         eyebrow="Contact"
-        title="Tell me what you’re building."
-        description="If the project is real, I’ll reply with a concrete point of view on how to approach it. Expect a clear response within 48 hours."
-        primaryAction={{ label: "View services", href: "/services" }}
-        secondaryAction={{ label: "Read writing", href: "/blog" }}
+        title="Tell me what you’re trying to solve."
+        description="If the work touches AI operations, RLHF, local systems, or a full-stack product build, send the details. I’ll reply with a concrete point of view."
+        primaryAction={{ label: "What I offer", href: "/services" }}
+        secondaryAction={{ label: "Read about me", href: "/about" }}
       />
 
       <section className="section-shell pt-0">

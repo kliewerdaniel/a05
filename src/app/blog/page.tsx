@@ -11,7 +11,7 @@ import { Surface } from "@/components/ui/surface";
 export const metadata: Metadata = {
   title: "Writing",
   description:
-    "Deep technical writing on AI systems, local LLMs, evaluation workflows, and production infrastructure.",
+    "Notes, essays, and implementation write-ups from Daniel Kliewer's work in AI operations, RLHF, and local systems.",
 };
 
 export default function BlogPage() {
@@ -23,8 +23,8 @@ export default function BlogPage() {
     <>
       <PageHeader
         eyebrow="Writing"
-        title="Technical essays and production notes."
-        description="A structured archive of local-first AI infrastructure, implementation details, and the engineering tradeoffs behind the systems."
+        title="Notes from the work."
+        description="Essays and implementation write-ups from the systems, workflows, and experiments I build."
         primaryAction={{ label: "Browse the archive", href: "#archive" }}
         secondaryAction={{ label: "Read a featured article", href: featured ? `/blog/${featured.slug}` : "/contact" }}
       />
@@ -81,7 +81,7 @@ export default function BlogPage() {
                 <span className="eyebrow-dot" />
                 <span>Archive</span>
               </div>
-              <h2 className="section-heading mt-6">Recent and notable writing.</h2>
+            <h2 className="section-heading mt-6">Recent and notable writing.</h2>
             </div>
             <p className="lead-copy max-w-2xl text-muted-foreground lg:justify-self-end">
               This list is intentionally dense. Readers should be able to scan for relevance without
