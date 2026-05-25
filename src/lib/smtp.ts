@@ -31,5 +31,5 @@ export function createSmtpTransporter() {
 }
 
 export function getContactRecipient() {
-  return process.env.CONTACT_EMAIL ?? SITE.email;
+  return process.env.CONTACT_EMAIL ?? "danielkliewer@gmail.com";
 }
