@@ -19,7 +19,6 @@ const FOOTER_LINKS = {
   ],
   Writing: [
     { href: "/blog", label: "Blog" },
-    { href: "/resources", label: "Resources" },
     { href: "/lab", label: "Lab" },
   ],
   Company: [

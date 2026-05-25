@@ -6,6 +6,10 @@ import { ResourcesGrid } from "@/components/sections/resources-grid";
 export const metadata: Metadata = {
   title: "Resources",
   description: "Practical guides, templates, and tools drawn from Daniel Kliewer's AI work.",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function ResourcesPage() {
