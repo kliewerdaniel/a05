@@ -11,9 +11,9 @@ export const SITE = {
   email: "danielkliewer@gmail.com",
   links: {
     github: "https://github.com/kliewerdaniel",
-    twitter: "https://twitter.com/kliewerdaniel",
-    linkedin: "https://linkedin.com/in/kliewerdaniel",
-    youtube: "https://youtube.com/@kliewerdaniel",
+    twitter: "https://x.com/kliewer_daniel",
+    linkedin: "https://www.linkedin.com/in/daniel-kliewer-42691944/",
+    youtube: "https://www.youtube.com/@kadaligogh",
   },
 } as const;
 
