@@ -1,32 +1,62 @@
 import Link from "next/link";
-import { ArrowLeft, Construction } from "lucide-react";
+import type { Metadata } from "next";
+import { PageHeader } from "@/components/layout/page-header";
+import { KnowledgeGraphExplorer } from "@/components/lab/knowledge-graph-explorer";
+import { CTASection } from "@/components/sections/cta-section";
 import { Surface } from "@/components/ui/surface";
-import { Heading } from "@/components/ui/heading";
-import { Text } from "@/components/ui/text";
+import { getAllPosts } from "@/lib/blog";
+
+export const metadata: Metadata = {
+  title: "Knowledge Graph Explorer",
+  description: "Interactive graph visualization of the site’s content ecosystem.",
+};
 
 export default function KnowledgeGraphPage() {
-  return (
-    <div className="section-shell pt-28 sm:pt-32 lg:pt-36">
-      <div className="container-page">
-        <Link
-          href="/lab"
-          className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-        >
-          <ArrowLeft className="h-4 w-4" />
-          Back to Lab
-        </Link>
+  const posts = getAllPosts();
 
-        <Surface variant="glass" className="mx-auto mt-10 max-w-3xl p-8 text-center sm:p-10">
-          <Construction className="mx-auto h-16 w-16 text-primary/60" />
-          <Heading as="h1" variant="display" className="mt-6">
-            Knowledge Graph Explorer
-          </Heading>
-          <Text variant="hero" className="mx-auto mt-4 max-w-xl text-muted-foreground">
-            Interactive visualization of the content ecosystem. The graph interface is under
-            active development.
-          </Text>
-        </Surface>
-      </div>
-    </div>
+  return (
+    <>
+      <PageHeader
+        eyebrow="Lab"
+        title="Knowledge Graph Explorer"
+        description="A graph-based view of the archive. Nodes represent posts, themes, and recurring signals."
+        primaryAction={{ label: "Back to lab", href: "/lab" }}
+        secondaryAction={{ label: "Open chat sandbox", href: "/lab/chat" }}
+      />
+
+      <section className="section-shell pt-0">
+        <div className="container-page">
+          <KnowledgeGraphExplorer posts={posts} />
+        </div>
+      </section>
+
+      <section className="section-shell pt-0">
+        <div className="container-page">
+          <Surface variant="outline" className="grid gap-6 p-8 lg:grid-cols-[1fr_auto] lg:items-center">
+            <div className="max-w-2xl">
+              <div className="eyebrow">
+                <span className="eyebrow-dot" />
+                <span>Notes</span>
+              </div>
+              <h2 className="section-heading mt-6">The graph is a navigation layer, not decoration.</h2>
+              <p className="lead-copy mt-5 text-muted-foreground">
+                It’s built from the same posts that power the blog archive, so the graph is useful
+                only if the underlying content stays useful.
+              </p>
+            </div>
+            <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-medium text-primary">
+              Explore the blog
+            </Link>
+          </Surface>
+        </div>
+      </section>
+
+      <CTASection
+        headline="Need a graph like this for your own corpus?"
+        body="The same structure can be adapted for documentation, research notes, or private knowledge systems."
+        buttonText="Discuss a project"
+        buttonUrl="/contact"
+      />
+    </>
   );
 }
